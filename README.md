@@ -1,7 +1,13 @@
 # stack-haddock-upload
 
-This tool enables people to send documentation to Hackage with a stack-powered project.
+Hackage often fails to build documentation; this script allows you to manually upload documentation for your package.
 
-You just have to pass the project name and the version to upload documentation for. You also need
-to be in the root directory of your project. The script will ask you for your Hackage username and
-password.
+Usage:
+
+```shell
+# From project root
+$ stack-haddock-upload
+```
+
+The script will build docs using `stack haddock`, then upload them for the current version of the package you're in,
+asking you for your hackage username and password. 
